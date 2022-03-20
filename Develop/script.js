@@ -59,11 +59,15 @@ function characterTypes(
 
   if (lowerCase) {
     charSet = charSet + "abcdefghijklmnopqrstuvwxyz";
-  } else if (upperCase) {
+  }
+  if (upperCase) {
     charSet = charSet + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  } else if (numbers) {
+    console.log(upperCase);
+  }
+  if (numbers) {
     charSet = charSet + "0123456789";
-  } else if (specialCharacters) {
+  }
+  if (specialCharacters) {
     charSet = charSet + " !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
   }
   //return value
@@ -93,24 +97,24 @@ function characterTypes(
   // }
 }
 
-var getRandom = {
-  lower: getLower,
-  upper: getUpper,
-  number: getNumber,
-  symbol: getCharacter,
-};
-function getLower() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-}
-function getUpper() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-}
-function getNumber() {
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-}
-function getCharacter() {
-  return String.fromCharCode(Math.floor(Math.random() * 125) + 131);
-}
+// var getRandom = {
+//   lower: getLower,
+//   upper: getUpper,
+//   number: getNumber,
+//   symbol: getCharacter,
+// };
+// function getLower() {
+//   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+// }
+// function getUpper() {
+//   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+// }
+// function getNumber() {
+//   return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+// }
+// function getCharacter() {
+//   return String.fromCharCode(Math.floor(Math.random() * 125) + 131);
+// }
 
 // Write password to the #password input
 function writePassword(lower, upper, number, symbol, length) {
